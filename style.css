@@ -7,7 +7,9 @@
     --font-base: 14px;
     --margin-wrapper: calc(var(--header-height) - calc((var(--header-height) - 10px)));
     --title-weight: 200;
-    --header-background: linear-gradient(90deg, rgba(253, 195, 0, 1) 0%, rgba(220, 88, 28, 1) 35%, rgba(199, 59, 33, 1) 100%);
+    --header-background-color: linear-gradient(90deg, rgba(253, 195, 0, 1) 0%, rgba(220, 88, 28, 1) 35%, rgba(199, 59, 33, 1) 100%);
+    --header-title-color: white; 
+    --margin-logos: 30px;
 }
 
 
@@ -20,27 +22,28 @@
 }
 
 .header{
-    background: var(--header-background);
+    background: var(--header-background-color);
     height: var(--header-height);
+    /* margin: var(--margin-wrapper); */
     overflow: hidden;
 }
 
 .header__wrapper{
     display: flex;
     align-items: center;
-    justify-content:space-around;
-    margin: var(--margin-wrapper);
+    justify-content: space-between;
+    height: var(--header-height);
+    flex-direction: row;
 }
 
 .header__logo{ 
     height: var(--logo-height);
+    margin: var(--margin-logos);
 }
 
 .header__title{
-    color: white;
+    color: var(--header-title-color);
     font-family: "Bebas Neue", sans-serif;
     font-weight: var(--title-weight);
     font-size: var(--title-size);
-    /* background-color: aqua; */
 }
-
