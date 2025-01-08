@@ -1,30 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --header-height: 85px;
+    --logo-height: calc(var(--header-height) - 20px);
+    --title-size: clamp(1.5rem, 4vw, 2.5rem);
+    --font-base: 14px;
+    --margin-wrapper: calc(var(--header-height) - calc((var(--header-height) - 10px)));
+    --title-weight: 200;
+    --header-background-color: linear-gradient(90deg, rgba(253, 195, 0, 1) 0%, rgba(220, 88, 28, 1) 35%, rgba(199, 59, 33, 1) 100%);
+    --header-title-color: white; 
+    --margin-logos: 30px;
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-size: var(--font-base);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.navbar{
-    background: linear-gradient(90deg, rgba(253, 195, 0, 1) 0%, rgba(220, 88, 28, 1) 35%, rgba(199, 59, 33, 1) 100%);
-    height: 90px;
+.header{
+    background: var(--header-background-color);
+    height: var(--header-height);
+    /* margin: var(--margin-wrapper); */
     overflow: hidden;
+}
+
+.header__wrapper{
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    height: var(--header-height);
+    flex-direction: row;
 }
 
-.navbar__item{
-    /* background-color: aqua; */
-    /* padding: 10px; */
+.header__logo{ 
+    height: var(--logo-height);
+    margin: var(--margin-logos);
 }
 
-.navbar__logo{ 
-    height: 70px;
-    margin: 10px;
-}
-
-.navbar__title{
-    color: white;
-    font-size: 2rem;
-    /* background-color: aqua; */
+.header__title{
+    color: var(--header-title-color);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: var(--title-weight);
+    font-size: var(--title-size);
 }
